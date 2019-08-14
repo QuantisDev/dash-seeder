@@ -80,7 +80,7 @@ class CNode {
     CAddress me(CService("0.0.0.0"));
     BeginMessage("version");
     int nBestHeight = GetRequireHeight();
-    string ver = "/quantisnet-seeder:0.1.0/";
+    string ver = "/dash-seeder:0.14.0.1/";
     bool fRelay = false;
     vSend << PROTOCOL_VERSION << nLocalServices << nTime << you << me << nLocalNonce << ver << nBestHeight << fRelay;
     EndMessage();
@@ -302,7 +302,7 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
 
 /*
 int main(void) {
-  CService ip("quandnsseed.llama.network", 9801, true);
+  CService ip("darkcoin.io", 9999, true);
   vector<CAddress> vAddr;
   vAddr.clear();
   int ban = 0;
